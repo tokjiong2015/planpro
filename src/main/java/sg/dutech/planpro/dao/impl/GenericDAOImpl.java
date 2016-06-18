@@ -52,13 +52,13 @@ public class GenericDAOImpl<T> extends HibernateDaoSupport implements GenericDAO
 	
 	@SuppressWarnings("unchecked")
 	public List<T> findByNamedQuery(String queryName, Object... values) {
-		return this.getHibernateTemplate().findByNamedQuery(queryName, values);
+		return (List<T>) this.getHibernateTemplate().findByNamedQuery(queryName, values);
 	}
 
 	
 	@SuppressWarnings("unchecked")
 	public List<T> findByCriteria(DetachedCriteria detachedCriteria) {
-		return  this.getHibernateTemplate().findByCriteria(detachedCriteria);
+		return  (List<T>) this.getHibernateTemplate().findByCriteria(detachedCriteria);
 	}
 	
 }

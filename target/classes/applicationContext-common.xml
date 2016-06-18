@@ -37,7 +37,7 @@
 			</props>
 		</property>
 		
-		<property name="mappingDirectoryLocations" value="classpath:sg/dutech/planpro/hbmmaping"></property>
+		<property name="mappingDirectoryLocations" value="classpath:sg/dutech/planpro/domain"></property>
 	</bean>
 
 	<!-- Transaction Config -->
@@ -64,8 +64,7 @@
 
 	<!-- Aop -->
 	<aop:config>
-		<aop:advisor advice-ref="txAdvice"
-			pointcut="execution(*sg.dutech.planpro.service.impl..*(..))"></aop:advisor>
+		<aop:advisor advice-ref="txAdvice" pointcut="execution(* sg.dutech.planpro.service.impl..*(..))"></aop:advisor>
 	</aop:config>
 
 </beans>

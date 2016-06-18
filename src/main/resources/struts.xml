@@ -42,5 +42,10 @@
 			</result>
 		</action>
 	</package>
-
+	<package name="nologin" extends="struts-default">
+		<action name="login" class="sg.dutech.planpro.web.action.user.LoginAction">
+			<result name="input">/login.jsp</result>
+			<result type="redirect">/index.jsp</result>
+		</action>
+	</package>
 </struts>

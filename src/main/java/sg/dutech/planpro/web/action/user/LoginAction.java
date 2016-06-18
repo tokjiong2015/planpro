@@ -15,7 +15,6 @@ import com.opensymphony.xwork2.ModelDriven;
  */
 public class LoginAction extends BaseAction implements ModelDriven<User> {
 
-	
 	/**
 	 * 
 	 */
@@ -28,7 +27,7 @@ public class LoginAction extends BaseAction implements ModelDriven<User> {
 
 	
 	public String execute() {
-
+		System.out.println("testing");
 		String checkCodeSession = (String) ServletActionContext.getRequest().getSession().getAttribute("key");
 		if (checkCodeSession == null || !checkCodeSession.equals(checkcode)) {
 		
